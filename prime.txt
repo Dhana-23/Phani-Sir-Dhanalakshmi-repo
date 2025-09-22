@@ -62,37 +62,3 @@ public class PalindromeString {
     }
 }
 
-//Armstrong number
-import java.util.Scanner;
-
-public class ArmstrongNumber {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        // Input number
-        System.out.print("Enter a number: ");
-        int num = sc.nextInt();
-
-        int original = num;
-        int result = 0;
-        int digits = String.valueOf(num).length(); // count digits
-
-        // Calculate sum of powers of digits
-        while (num != 0) {
-            int digit = num % 10;
-            result += Math.pow(digit, digits);
-            num = num / 10;
-        }
-
-        // Check Armstrong
-        if (original == result) {
-            System.out.println(original + " is an Armstrong Number.");
-        } else {
-            System.out.println(original + " is NOT an Armstrong Number.");
-        }
-
-        sc.close();
-    }
-}
-
-
