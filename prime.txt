@@ -35,3 +35,30 @@ public class PrimeNumberCheck {
 }
 phani 
 hello sir how are you? 
+import java.util.Scanner;
+
+public class PalindromeString {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input string
+        System.out.print("Enter a word: ");
+        String str = sc.nextLine();
+
+        // Reverse the string
+        String rev = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev = rev + str.charAt(i);
+        }
+
+        // Check palindrome
+        if (str.equalsIgnoreCase(rev)) {
+            System.out.println(str + " is a Palindrome.");
+        } else {
+            System.out.println(str + " is NOT a Palindrome.");
+        }
+
+        sc.close();
+    }
+}
+
